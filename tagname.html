@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>getElementsByTagName Example</title>
+</head>
+<body>
+<h1>Title 1</h1>
+<p>Paragraph 1</p>
+<h2>Title 2</h2>
+<p>Paragraph 2</p>
+<h3>Title 3</h3>
+<p>Paragraph 3</p>
+
+ 
+
+  <script>
+    // Get all the <h2> elements in the document
+    var headings = document.getElementsByTagName('h2');
+
+ 
+
+    // Loop through the collection of <h2> elements and log their text content
+    for (var i = 0; i < headings.length; i++) {
+      console.log(headings[i].textContent);
+    }
+</script>
+</body>
+</html>

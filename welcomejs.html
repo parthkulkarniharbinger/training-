@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Welcome Message</title>
+</head>
+<body>
+  <form onsubmit="return displayWelcome(event)">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" required />
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="welcomeMessage"></p>
+
+  <script>
+    function displayWelcome(event) {
+      event.preventDefault();
+
+      var nameInput = document.getElementById("name");
+      var welcomeMessage = document.getElementById("welcomeMessage");
+      var name = nameInput.value;
+
+      if (name.trim() !== "") {
+        welcomeMessage.textContent = "Welcome, " + name + "!";
+      } else {
+        welcomeMessage.textContent = "";
+      }
+
+      return false;
+    }
+  </script>
+</body>
+</html>

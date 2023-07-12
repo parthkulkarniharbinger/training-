@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>innerHTML Example</title>
+</head>
+<body>
+<div id="myDiv">
+<h1>Welcome</h1>
+<p>This is a paragraph.</p>
+</div>
+
+ 
+
+  <button id="changeBtn">Change Content</button>
+
+ 
+
+  <script>
+    // Get the div element by its ID
+    var myDiv = document.getElementById('myDiv');
+
+ 
+
+    // Get the button element by its ID
+    var changeBtn = document.getElementById('changeBtn');
+
+ 
+
+    // Add a click event listener to the button
+    changeBtn.addEventListener('click', function() {
+      // Update the content of the div using innerHTML
+      myDiv.innerHTML = '<h1>New Heading</h1><p>New paragraph content.</p>';
+    });
+</script>
+</body>
+</html>

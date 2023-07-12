@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>getElementsByName Example</title>
+</head>
+<body>
+<input type="text" name="username" placeholder="Enter your username">
+<input type="text" name="email" placeholder="Enter your email">
+<input type="text" name="phone" placeholder="Enter your phone number">
+<button id="submitBtn">Submit</button>
+
+ 
+
+  <div id="output"></div>
+
+ 
+
+  <script>
+    // Get the button element by its ID
+    var submitBtn = document.getElementById('submitBtn');
+
+ 
+
+    // Add a click event listener to the button
+    submitBtn.addEventListener('click', function() {
+      // Get the values of all inputs with name attribute "username"
+      var usernameValues = [];
+      var usernameInputs = document.getElementsByName('username');
+      for (var i = 0; i < usernameInputs.length; i++) {
+        usernameValues.push(usernameInputs[i].value);
+      }
+
+ 
+
+      // Display the username values on the web page
+      var outputDiv = document.getElementById('output');
+      outputDiv.textContent = 'Username values: ' + usernameValues.join(', ');
+    });
+</script>
+</body>
+</html>
